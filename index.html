@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rephrasing tech docs so people actually read them</title>
+<meta name="description" content="I spent years writing docs nobody read. Turns out the fix was simpler sentences, not better content.">
+<link rel="canonical" href="https://belikenative.com/best-way-rephrase-sentences-clarity/">
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;max-width:720px;margin:40px auto;padding:0 20px;line-height:1.7;color:#333;background:#fff}
+h1{font-size:1.8em;line-height:1.3;margin-bottom:8px}
+h2{font-size:1.4em;margin-top:32px}
+h3{font-size:1.2em;margin-top:24px}
+p{margin:16px 0}
+a{color:#2563eb;text-decoration:none}
+a:hover{text-decoration:underline}
+ul{padding-left:24px}
+li{margin:8px 0}
+.source{color:#666;font-size:14px;margin-bottom:24px;padding-bottom:16px;border-bottom:1px solid #eee}
+.footer{margin-top:40px;padding-top:20px;border-top:1px solid #eee;color:#666;font-size:14px}
+</style>
+</head>
+<body>
+<article>
+<h1>Rephrasing tech docs so people actually read them</h1>
+<div class="source">Originally published at <a href="https://belikenative.com/best-way-rephrase-sentences-clarity/">belikenative.com/best-way-rephrase-sentences-clarity</a></div>
+<p>I used to write technical documentation that was technically correct and completely unreadable. Full disclosure: I built <a href="https://belikenative.com">BeLikeNative</a>, a free Chrome extension for real-time grammar and writing help. Take my perspective accordingly. But the lessons I'm sharing here came from years of writing docs that developers skimmed and then messaged me on Slack asking the same questions the docs already answered.</p>
+<p>The problem wasn't missing information. It was buried information, wrapped in long sentences and passive constructions that made readers give up halfway through a paragraph.</p>
+<h2>Simple words do more work</h2>
+<p>I'll start with the easiest fix because it has the biggest payoff. Swap formal words for plain ones. Where you'd write "use," write "use." Where you'd write "help," write "help." Where you'd write "start," write "start." None of these swaps lose meaning. They just remove friction.</p>
+<p>I ran into this on a project last year. A colleague wrote "the implementation necessitates configuration of the requisite parameters prior to execution." I rephrased it to "configure the required settings before running the program." Same meaning, half the words, and the person reading it at 2am during an incident actually understood it.</p>
+<p>There's a common fear that simpler words make you sound less technical. I don't buy it. The smartest engineers I've worked with write the plainest docs. They don't need fancy vocabulary to prove they know the material.</p>
+<h2>One idea per sentence</h2>
+<p>Long sentences are the silent killer of technical docs. I've seen 60-word sentences in API guides that required three readings to parse. The fix is almost mechanical: if a sentence has more than one idea, split it.</p>
+<p>Here's a real example I rewrote recently. The original read: "The API authentication process, requiring token generation and inclusion in each request, must be completed before any data retrieval operations can be performed successfully." One sentence doing the work of three.</p>
+<p>I broke it apart. "Complete API authentication before retrieving data. First, generate a token through the admin panel. Then include that token in the header of each request." Each sentence handles one step. A developer scanning at speed can follow it without backtracking.</p>
+<p>I try to keep most sentences between 10 and 20 words. Some go shorter. A few stretch longer when the idea genuinely needs room. But I almost never let a sentence pass 30 words in documentation.</p>
+<h2>Active voice changes everything</h2>
+<p>Passive voice hides who does what. "The settings are configured by the administrator" takes longer to process than "the administrator configures the settings." In technical docs, knowing who performs an action matters. It's not just a style preference.</p>
+<p>I catch myself writing in passive voice more than I'd like to admit. My trick is to search for "by the" in a draft. If that phrase appears more than twice, I know I've slipped into passive territory and need to rewrite those sections.</p>
+<p>Turning passive into active usually shortens the sentence too. "The error was identified by the monitoring system" becomes "the monitoring system identified the error." Shorter, clearer, and the reader immediately knows what did the identifying.</p>
+<h2>Cut the filler</h2>
+<p>After fixing vocabulary, sentence length, and voice, I look for words that don't earn their place. "Basically," "actually," "completely," and "absolutely" almost never add meaning. I delete them on sight.</p>
+<p>Wordy phrases are just as common. "Due to the fact that" is a five-word way of saying "because." "In order to" is just "to" with extra steps. "For the purpose of" does the same job as "to" plus a verb. These substitutions feel small individually, but across a 20-page document they save readers real time.</p>
+<p>I also hunt for sentences that start with "there are." Those constructions push the actual subject later in the sentence. "There are three steps users must complete" reads slower than "users must complete three steps." The second version gets to the point faster and puts the actor up front where they belong.</p>
+<h2>Keeping accuracy while simplifying</h2>
+<p>Simpler language shouldn't mean vaguer language. I learned this the hard way when I rewrote "the system supports up to 1,000 concurrent users" as "the system handles many users." A product manager flagged it immediately, and they were right. The specific number mattered for capacity planning.</p>
+<p>My rule: simplify the structure, not the facts. Swap complex grammar for simple grammar. Swap long words for short ones. But don't replace specific numbers with vague estimates, and don't swap technical terms for approximate synonyms unless they're genuinely interchangeable in context. "Authentication" and "login" aren't always the same thing.</p>
+<p>I keep a consistent vocabulary throughout any document too. If I call something a "dashboard" in section one, I don't call it a "control panel" in section three. Inconsistent terminology makes readers wonder if they're looking at two different things.</p>
+<h2>Writing for mixed audiences</h2>
+<p>Most documentation serves readers at different skill levels. I don't create separate versions for beginners and experts. Instead, I write the main content for intermediate users and layer in context where it helps.</p>
+<p>For example, "configure the API endpoint" works for experienced developers. For a broader audience, I might write "configure the API endpoint (the URL where your application sends requests)." The parenthetical helps newcomers without slowing down the experienced reader who just skips past it.</p>
+<p>That led me to start adding brief glossaries at the end of longer docs. They keep the main text clean while giving less experienced readers a reference point. It's a small effort that saves a lot of support questions.</p>
+<h2>Tools that speed up the editing pass</h2>
+<p>I built <a href="https://belikenative.com">BeLikeNative</a> partly because I wanted a faster way to check my own writing. The extension runs in Chrome and catches grammar issues, suggests simpler phrasing, and works across Google Docs, Notion, and most web-based editors. It supports over 80 languages, which has been useful for checking translations of our own docs.</p>
+<p>The clipboard shortcut ended up being the feature I use most. Copy a paragraph, hit the shortcut, get a cleaner version back. For long documents, that workflow cuts revision time significantly.</p>
+<p>But tools only help if your underlying approach is sound. No grammar checker can fix a sentence that tries to convey four ideas at once. Start with the structural changes (shorter sentences, active voice, plain vocabulary) and then use tools to polish what's left.</p>
+<p>I think the trend toward plain language in technical writing will keep accelerating as more teams measure docs by task completion rates rather than word counts.</p>
+<p>I build <a href="https://belikenative.com">BeLikeNative</a>, a free Chrome extension that helps you write better English anywhere on the web. No signup, no data collection.</p>
+<div class="footer">
+<p>Read the original at <a href="https://belikenative.com/best-way-rephrase-sentences-clarity/">belikenative.com/best-way-rephrase-sentences-clarity</a></p>
+<p><a href="https://belikenative.com">BeLikeNative</a> is a free Chrome extension for real-time grammar checking and writing improvement.</p>
+</div>
+</article>
+</body>
+</html>
